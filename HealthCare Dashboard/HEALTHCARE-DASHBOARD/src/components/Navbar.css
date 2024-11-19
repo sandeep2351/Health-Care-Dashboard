@@ -1,0 +1,67 @@
+/* Navbar styling */
+.navbar {
+  position: fixed; /* Fixes the navbar at the top of the page */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the viewport */
+  z-index: 1000; /* Ensures navbar stays on top of other content */
+  display: flex;
+  justify-content: space-between; /* Aligns items on the left and right */
+  align-items: center;
+  padding: 15px 30px; /* Adds padding inside the navbar */
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Gradient background */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  border-bottom: 2px solid rgba(255, 154, 158, 0.5); /* Light border at the bottom */
+}
+
+/* Navbar title styling */
+.navbar-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white; /* White text color */
+}
+
+/* Styling for navbar buttons container */
+.navbar-buttons {
+  display: flex;
+  gap: 15px; /* Spacing between buttons */
+  margin-left: auto; /* Pushes buttons to the right */
+  transform: translateX(-50px); /* Slight shift to the left */
+}
+
+/* Individual navbar button styling */
+.navbar-button {
+  padding: 10px 20px; /* Button padding */
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #f76c6c, #ff9a9e); /* Gradient background */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover/active effects */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Hover effect for navbar buttons */
+.navbar-button:hover {
+  transform: translateY(-3px); /* Slight upward shift */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+/* Active effect for navbar buttons (when clicked) */
+.navbar-button:active {
+  transform: translateY(0); /* Resets upward shift */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Original shadow */
+}
+
+/* Body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  padding-top: 70px; /* Adds space at the top to prevent navbar overlap */
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Background gradient */
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Dashboard</title>
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Navbar section -->
+    <div class="navbar">
+        <div class="navbar-title">Healthcare Dashboard</div>
+        <div class="navbar-buttons">
+            <!-- Login button -->
+            <button class="navbar-button" onclick="window.location.href='/login'">Login</button>
+            <!-- Signup button -->
+            <button class="navbar-button" onclick="window.location.href='/signup'">Signup</button>
+        </div>
+    </div>
+
+    <!-- Dashboard container -->
+    <div class="dashboard-container">
+        <h1 class="dashboard-title">Healthcare Dashboard</h1>
+        <!-- Form for user input -->
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" name="name" class="input" required>
+            </div>
+            <div class="form-group">
+                <label>Age:</label>
+                <!-- Dropdown for selecting age -->
+                <select name="age" class="input" required>
+                    <option value="">Select Age</option>
+                    <!-- Loop to generate age options from 1 to 100 -->
+                    {% for age in range(1, 101) %}
+                        <option value="{{ age }}">{{ age }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Upload File:</label>
+                <!-- File input for uploading a file -->
+                <input type="file" name="file" class="input file-input" required>
+            </div>
+            <!-- Submit button for form -->
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

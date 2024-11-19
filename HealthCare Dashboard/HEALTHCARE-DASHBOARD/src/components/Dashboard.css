@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Gradient background */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  box-sizing: border-box;
+}
+
+.dashboard-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 15px; /* Rounded corners */
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-container:hover {
+  transform: scale(1.03); /* Scale effect on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #444;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #f76c6c; /* Decorative line under the title */
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+.form-wrapper {
+  padding: 20px;
+  background: #fdfdfd; /* Light background for the form */
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  overflow: hidden;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Spacing between form elements */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333; /* Label text color */
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth focus effect */
+}
+
+.input-field:focus {
+  border-color: #f76c6c; /* Border color change on focus */
+  box-shadow: 0 0 8px rgba(247, 108, 108, 0.5); /* Focus glow */
+  outline: none;
+}
+
+.submit-button {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #f76c6c, #ff9a9e); /* Gradient background for the button */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:hover {
+  transform: translateY(-3px); /* Button lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow deepens on hover */
+}
+
+.submit-button:active {
+  transform: translateY(0); /* Reset position on active click */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reset shadow */
+}
+
+.dashboard-container::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 154, 158, 0.2); /* Decorative circle on top-right */
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.dashboard-container::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 154, 158, 0.2); /* Decorative circle on bottom-left */
+  border-radius: 50%;
+  z-index: -1;
+}
